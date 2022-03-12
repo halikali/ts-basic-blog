@@ -1,3 +1,5 @@
+@import "../../css/common/mixin";
+
 .navbar {
   background-color: black;
 
@@ -5,6 +7,33 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    .navlist {
+      display: none;
+      @include media(tablet) {
+        display: flex;
+      }
+      width: 100%;
+      justify-content: space-around;
+      align-items: center;
+      flex-direction: row;
+      nav {
+        width: 100%;
+      }
+      ul {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+      }
+
+      &__icon {
+        display: none;
+
+        @include media(desktop) {
+          display: block;
+        }
+      }
+    }
   }
 
   &__logo {
@@ -17,5 +46,56 @@
     color: white;
     display: flex;
     gap: 15px;
+  }
+
+  &__icon {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+
+    &--bars {
+      @include media(tablet) {
+        display: none;
+      }
+    }
+  }
+
+  &__mobile {
+    height: auto;
+
+    @include media(tablet) {
+      display: none !important;
+    }
+
+    &--opened {
+      height: auto;
+      visibility: visible;
+      animation-name: open;
+      animation-duration: 0.5s;
+    }
+
+    &--closed {
+      height: 0;
+      visibility: hidden;
+      animation-name: close;
+      animation-duration: 0.5s;
+    }
+  }
+
+  @keyframes open {
+    from {
+      height: 0;
+    }
+    to {
+      height: 330px;
+    }
+  }
+  @keyframes close {
+    from {
+      height: 330px;
+    }
+    to {
+      height: o;
+    }
   }
 }
