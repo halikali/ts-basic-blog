@@ -1,0 +1,88 @@
+@import "../../css/common/variables";
+@import "../../css/common/mixin";
+
+.card {
+  width: 100%;
+  margin-bottom: 50px !important;
+
+  @include media(desktop) {
+    width: 921px;
+    margin: auto;
+  }
+
+  &__title {
+    font-size: 24px;
+    font-weight: 700;
+    padding: 10px 0;
+  }
+
+  &__created {
+    margin: 7px 0;
+    line-height: 1.5;
+    font-size: 16px;
+  }
+
+  &__body {
+    @include media(tablet) {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      height: 240px;
+    }
+  }
+
+  &__image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 15px;
+    margin-top: 10px;
+
+    @include media(tablet) {
+      width: 50%;
+      height: 100%;
+      object-fit: cover;
+      padding: 10px 0;
+      box-sizing: border-box;
+      //   min-height: 220px;
+    }
+  }
+
+  &__content {
+    @include media(tablet) {
+      height: 100%;
+    }
+  }
+  &__summary {
+    width: 100%;
+    height: 166px;
+    overflow: hidden;
+    margin: 10px 0;
+    line-height: 1.5;
+    font-size: 18px;
+    text-align: justify;
+    display: -webkit-box;
+    -webkit-line-clamp: 6;
+    -webkit-box-orient: vertical;
+  }
+
+  &__read-button {
+    width: 127px;
+    height: 41px;
+    line-height: 1;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 40px;
+    margin-top: 10px;
+    background-color: map-get($colors, color-black);
+    color: map-get($colors, color-white);
+    box-shadow: rgba(23, 43, 99, 0.4) 0 7px 28px;
+
+    @include media(tablet) {
+      margin-left: 50%;
+      transform: translate(-50%);
+    }
+  }
+}
