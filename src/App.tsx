@@ -6,6 +6,7 @@ import { getDate } from "store/actions/exampleAction";
 import routes from "./routes";
 import "./App.scss";
 import Navbar from "components/Navbar";
+import Footer from "components/Footer";
 
 function App() {
   const dispatch = useDispatch();
@@ -22,6 +23,7 @@ function App() {
           <Route path={route.path} element={route.page} key={route.name} />
         ))}
       </Routes>
+      <Footer />
     </div>
   );
 }
