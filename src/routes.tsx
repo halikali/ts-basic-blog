@@ -1,5 +1,5 @@
 import Home from "pages/Home";
-import PostDetail from "pages/PostDetail";
+import PostDetail from "pages/PostDetail/PostDetail";
 
 const routes = [
   {
