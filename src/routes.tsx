@@ -3,14 +3,14 @@ import PostDetail from "pages/PostDetail";
 
 const routes = [
   {
-    path: "/",
-    name: "Home",
-    page: <Home />,
-  },
-  {
     path: "/details",
     name: "postDetail",
     page: <PostDetail />,
+  },
+  {
+    path: "/",
+    name: "Home",
+    page: <Home />,
   },
 ];
 
