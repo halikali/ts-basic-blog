@@ -1,0 +1,22 @@
+.navlist {
+  * {
+    color: #fff;
+  }
+
+  &__link {
+    height: 55px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+
+    &.active {
+      background-color: #35343a;
+    }
+  }
+
+  &__icon {
+    width: 20px;
+    margin-left: 20px;
+  }
+}
