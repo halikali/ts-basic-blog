@@ -1,4 +1,4 @@
-export interface Post {
+export interface IPost {
   title: string;
   url: string;
   content: string;
@@ -6,4 +6,8 @@ export interface Post {
   status: string;
   createdAt: string;
   id?: string;
+}
+
+export interface IPosts{
+    posts: IPost[];
 }

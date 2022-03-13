@@ -1,9 +1,9 @@
 import { addDoc, collection, getDoc, getDocs } from "firebase/firestore";
 
-import { Post } from "types/postTypes";
+import { IPost } from "types/postTypes";
 import { db } from "../../firebase";
 
-export const addPost = (post: Post) => {
+export const addPost = (post: IPost) => {
   return (dispatch: any) => {
     dispatch({ type: "ADD_POST_REQUEST" });
 
@@ -38,7 +38,7 @@ export const getPosts = () => {
     });
 
     try {
-      let postsArray: Post[] = [];
+      let postsArray: IPost[] = [];
 
       const querySnapshot = await getDocs(collection(db, "posts"));
       querySnapshot.forEach((post) => {
