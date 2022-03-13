@@ -57,10 +57,10 @@ const NavList = () => {
           </li>
           <li className="navlist__list-item">
             <NavListItem
-              to={"/terms"}
+              to={"/create-post"}
               iconName={faInfoCircle}
-              pageName={"Terms And Condition"}
-              key="Terms And Condition"
+              pageName={"create Post"}
+              key="create Post"
             />
           </li>
         </ul>
