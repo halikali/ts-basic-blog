@@ -15,7 +15,17 @@ const Home = () => {
 
   return (
     <div className="container">
-      {posts && posts.map((post: IPost) => <Card key={post.id} />)}
+      {posts &&
+        posts.map((post: IPost) => (
+          <Card
+            createdAt={post.createdAt}
+            summary={post.summary}
+            key={post.id}
+            title={post.title}
+            url={post.url}
+            id={post.id as string}
+          />
+        ))}
     </div>
   );
 };
