@@ -37,6 +37,10 @@
     outline: 0;
     border: 1px solid gray;
 
+    &:focus {
+      border-color: rgb(54, 175, 163);
+    }
+
     &--textarea {
       min-height: 50px;
       resize: vertical;
