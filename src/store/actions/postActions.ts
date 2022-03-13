@@ -1,4 +1,4 @@
-import { addDoc, collection, getDoc, getDocs } from "firebase/firestore";
+import { addDoc, collection, doc, getDoc, getDocs } from "firebase/firestore";
 
 import { IPost } from "types/postTypes";
 import { db } from "../../firebase";
@@ -61,6 +61,23 @@ export const getPosts = () => {
       dispatch({
         type: "GET_POSTS_FAILURE",
         error: error,
+      });
+    }
+  };
+};
+
+export const getPostById = (id: any) => {
+  return async (dispatch: any) => {
+    dispatch({ type: "GET_POST_BY_ID_REQUEST" });
+    try {
+      const snapshot = await getDoc(doc(db, "posts", id));
+      if (snapshot.exists()) {
+        dispatch({ type: "GET_POST_BY_ID_SUCCESS", payload: snapshot.data() });
+      }
+    } catch (error) {
+      dispatch({
+        type: "GET_POST_BY_ID_FAILURE",
+        error: "Aradığınız gönderi kaldırılmış olabilir.",
       });
     }
   };
