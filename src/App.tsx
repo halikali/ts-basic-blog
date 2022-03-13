@@ -2,19 +2,12 @@ import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { Route, Routes } from "react-router";
 
-import { getDate } from "store/actions/exampleAction";
 import routes from "./routes";
 import Navbar from "components/Navbar";
 import Footer from "components/Footer";
 import "./App.scss";
 
 function App() {
-  const dispatch = useDispatch();
-
-  useEffect(() => {
-    dispatch(getDate());
-  }, [dispatch]);
-
   return (
     <div className="app">
       <Navbar />
