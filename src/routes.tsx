@@ -4,7 +4,7 @@ import PostDetail from "pages/PostDetail/PostDetail";
 
 const routes = [
   {
-    path: "/details",
+    path: "/details/:postId",
     name: "postDetail",
     page: <PostDetail />,
   },
