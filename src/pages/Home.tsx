@@ -11,7 +11,7 @@ const Home = () => {
 
   useEffect(() => {
     dispatch(getPosts());
-  }, []);
+  }, [dispatch]);
 
   return (
     <div className="container">

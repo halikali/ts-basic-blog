@@ -1,6 +1,7 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router";
+
 import { getPostById } from "store/actions/postActions";
 import "./PostDetail.scss";
 
@@ -13,7 +14,7 @@ const PostDetail = () => {
 
   useEffect(() => {
     dispatch(getPostById(ID));
-  }, []);
+  }, [dispatch, ID]);
 
   return (
     <div className="post-detail">
