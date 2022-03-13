@@ -4,9 +4,9 @@ import { Route, Routes } from "react-router";
 
 import { getDate } from "store/actions/exampleAction";
 import routes from "./routes";
-import "./App.scss";
 import Navbar from "components/Navbar";
 import Footer from "components/Footer";
+import "./App.scss";
 
 function App() {
   const dispatch = useDispatch();
