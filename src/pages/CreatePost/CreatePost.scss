@@ -1,0 +1,45 @@
+@import "../../css/common/mixin";
+
+.create-post {
+  &__form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .label {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 5px;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+  }
+
+  .input-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    width: 100%;
+    margin: 10px;
+
+    @include media(desktop) {
+      width: 921px;
+      margin: 10px auto;
+    }
+  }
+
+  &__input {
+    width: 100%;
+    height: 40px;
+    text-indent: 10px;
+    outline: 0;
+    border: 1px solid gray;
+
+    &--textarea {
+      min-height: 50px;
+      resize: vertical;
+    }
+  }
+}
