@@ -6,7 +6,7 @@ import postReducer from "./reducers/postReducer";
 
 const rootReducer = combineReducers({
   post: postReducer,
-  posts: getPostsReducer,
+  allPosts: getPostsReducer,
   dateReducer,
 });
 
