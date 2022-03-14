@@ -21,12 +21,14 @@ const Card: React.FC<ICardProps> = (props) => {
       </p>
 
       <div className="card__body">
-        <img src={url} alt="" className="card__image" />
+        <div className="card__image-wrapper">
+          <img src={url} alt="" className="card__image" />
+        </div>
 
         <div className="card__content">
           <p className="card__summary">{summary}</p>
-          <Link to={`/details/${id}`}>
-            <button className="card__read-button">read more</button>
+          <Link to={`/details/${id}`} className="card__read-button">
+            <p className="card__read-button-text"> read more</p>
           </Link>
         </div>
       </div>
