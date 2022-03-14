@@ -1,6 +1,9 @@
+@import "../../css/common/mixin";
+
 .navlist {
   * {
     color: #fff;
+    box-sizing: border-box;
   }
 
   &__link {
@@ -12,6 +15,14 @@
 
     &.active {
       background-color: #35343a;
+
+      @include media(tablet) {
+        padding: 0 10px;
+      }
+
+      @include media(desktop) {
+        padding: 0 20px 0 0;
+      }
     }
   }
 
