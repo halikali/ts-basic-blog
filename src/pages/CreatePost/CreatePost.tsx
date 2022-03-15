@@ -1,3 +1,4 @@
+import { getAuth } from "firebase/auth";
 import { useEffect, useLayoutEffect, useRef } from "react";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
@@ -44,6 +45,7 @@ const CreatePost = () => {
       createdAt: `${
         monthNames[dateNow.getMonth()]
       } ${dateNow.getDate()}, ${dateNow.getFullYear()}`,
+      creator: getAuth().currentUser?.email?.split("@")[0] || "admin",
     };
     e.preventDefault();
 
