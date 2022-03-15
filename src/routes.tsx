@@ -1,5 +1,6 @@
 import CreatePost from "pages/CreatePost/CreatePost";
 import Home from "pages/Home";
+import LoginCheck from "pages/LoginCheck";
 import PostDetail from "pages/PostDetail/PostDetail";
 
 const routes = [
@@ -12,6 +13,11 @@ const routes = [
     path: "/create-post",
     name: "createPost",
     page: <CreatePost />,
+  },
+  {
+    path: "/login",
+    name: "login",
+    page: <LoginCheck />,
   },
   {
     path: "/",
