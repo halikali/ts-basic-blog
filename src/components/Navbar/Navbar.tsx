@@ -9,6 +9,7 @@ import {
 import NavList from "components/NavList";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -35,11 +36,13 @@ const Navbar = () => {
       <div className="container">
         <div className="row">
           <div className="col-12 navbar__wrapper">
-            <img
-              src={logo}
-              className={"navbar__logo"}
-              alt={"exception error logo"}
-            />
+            <Link to={"/"}>
+              <img
+                src={logo}
+                className={"navbar__logo"}
+                alt={"exception error logo"}
+              />
+            </Link>
 
             <NavList />
 
