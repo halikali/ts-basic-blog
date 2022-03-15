@@ -1,4 +1,4 @@
-import { useLayoutEffect, useRef } from "react";
+import { useEffect, useLayoutEffect, useRef } from "react";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 
@@ -13,6 +13,10 @@ const CreatePost = () => {
 
   const dispatch = useDispatch();
   const navigate = useNavigate();
+
+  useEffect(() => {
+    localStorage.getItem("isLoggedIn") !== "true" && navigate("/login");
+  }, []);
 
   const dateNow = new Date();
   const monthNames = [
