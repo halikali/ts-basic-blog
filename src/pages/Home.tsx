@@ -24,6 +24,7 @@ const Home = () => {
             title={post.title}
             url={post.url}
             id={post.id as string}
+            creator={post.creator}
           />
         ))}
     </div>
