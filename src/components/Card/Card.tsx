@@ -7,17 +7,18 @@ interface ICardProps {
   summary: string;
   createdAt: string;
   id: string;
+  creator: string;
 }
 
 const Card: React.FC<ICardProps> = (props) => {
-  const { title, url, summary, createdAt, id } = props;
+  const { title, url, summary, createdAt, id, creator } = props;
 
   return (
     <div className="card">
       <p className="card__title">{title}</p>
       <p className="card__created card__created--time">
         {createdAt} by
-        <span className="card__created card__created--author"> admin</span>
+        <span className="card__created card__created--author"> {creator}</span>
       </p>
 
       <div className="card__body">
