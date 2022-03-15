@@ -1,5 +1,3 @@
-import { useEffect } from "react";
-import { useDispatch } from "react-redux";
 import { Route, Routes } from "react-router";
 
 import routes from "./routes";
