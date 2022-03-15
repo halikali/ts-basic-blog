@@ -38,12 +38,11 @@
     width: 100%;
     height: auto;
     margin-top: 10px;
-    
+
     @include media(tablet) {
       width: 50%;
       height: 100%;
       object-fit: contain;
-      
     }
   }
 
@@ -63,7 +62,6 @@
 
   &__summary {
     width: 100%;
-    height: 166px;
     overflow: hidden;
     margin: 10px 0;
     line-height: 1.5;
@@ -72,6 +70,10 @@
     display: -webkit-box;
     -webkit-line-clamp: 6;
     -webkit-box-orient: vertical;
+
+    @include media(tablet) {
+      height: 166px;
+    }
   }
 
   &__read-button {
