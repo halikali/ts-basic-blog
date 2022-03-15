@@ -6,8 +6,9 @@ export interface IPost {
   status: string;
   createdAt: string;
   id?: string;
+  creator: string;
 }
 
-export interface IPosts{
-    posts: IPost[];
+export interface IPosts {
+  posts: IPost[];
 }
