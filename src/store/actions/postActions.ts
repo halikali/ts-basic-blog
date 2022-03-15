@@ -15,6 +15,7 @@ export const addPost = (post: IPost) => {
         summary: post.summary,
         status: post.status,
         created: post.createdAt,
+        creator: post.creator,
       });
 
       dispatch({
@@ -50,6 +51,7 @@ export const getPosts = () => {
           status: post.data().status,
           createdAt: post.data().created,
           id: post.id,
+          creator: post.data().creator,
         });
       });
 
